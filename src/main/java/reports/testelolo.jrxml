@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="testelolo" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="c6c26daf-3ddb-4e78-bd3c-800202f97c96">
+	<property name="zoom.factor" value="50.0"/>
+	<property name="DATASOURCE" value="jdbc/Testeloester1"/>
+	<property name="REPORT_DATASET" value="[{&quot;name&quot;:&quot;TESTE&quot;,&quot;j4CDataset&quot;:{&quot;datasetType&quot;:&quot;DATASOURCE&quot;,&quot;freeQuery&quot;:true,&quot;jndiConnection&quot;:&quot;jdbc/Testeloester1&quot;,&quot;sql&quot;:&quot;    SELECT\n    `TESTE2`.fk_teste1 ,\n    `TESTE2`.telefone ,\n  \n  `TESTE2`.email ,\n    `TESTE2`.id ,\n    `TESTE1`.sobrenome ,\n  \n  `TESTE1`.nome ,\n    `TESTE1`.id \nFROM TESTE2\nINNER JOIN\n TESTE1 ON TESTE2.fk_teste1 \u003d TESTE1.id;&quot;,&quot;recordLimit&quot;:10,&quot;tables&quot;:[],&quot;joins&quot;:[],&quot;columns&quot;:[],&quot;wheres&quot;:[],&quot;persistenceUnitName&quot;:&quot;app&quot;},&quot;main&quot;:true}]"/>
+	<queryString>
+		<![CDATA[    SELECT
+    `TESTE2`.fk_teste1 ,
+    `TESTE2`.telefone ,
+  
+  `TESTE2`.email ,
+    `TESTE2`.id ,
+    `TESTE1`.sobrenome ,
+  
+  `TESTE1`.nome ,
+    `TESTE1`.id 
+FROM TESTE2
+INNER JOIN
+ TESTE1 ON TESTE2.fk_teste1 = TESTE1.id;]]>
+	</queryString>
+	<field name="fk_teste1" class="java.lang.String">
+		<fieldDescription><![CDATA[fk_teste1]]></fieldDescription>
+	</field>
+	<field name="telefone" class="java.lang.String">
+		<fieldDescription><![CDATA[telefone]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[email]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="sobrenome" class="java.lang.String">
+		<fieldDescription><![CDATA[sobrenome]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[nome]]></fieldDescription>
+	</field>
+	<title>
+		<band height="79"/>
+	</title>
+	<pageHeader>
+		<band height="35"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61"/>
+	</columnHeader>
+	<detail>
+		<band height="125"/>
+	</detail>
+	<columnFooter>
+		<band height="45"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54"/>
+	</pageFooter>
+	<summary>
+		<band height="42"/>
+	</summary>
+</jasperReport>
